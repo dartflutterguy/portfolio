@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Jerry's Portfolio</title>
+
+    <meta name="theme-color" content="#121212" />
+    <meta name="robots" content="index,follow" />
+
+    <meta name="title" content="Your Name – Designer & Software Engineer" />
+    <meta
+      name="description"
+      content="Portfolio of Your Name, a designer and software engineer building thoughtful digital experiences."
+    />
+
+    <!-- Open Graph Universal-->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Jerry C. Igbokwe – Designer & Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Your Name, a designer and software engineer building thoughtful digital experiences."
+    />
+    <meta property="og:image" content="/preview.png" />
+    <meta property="og:url" content="https://yourdomain.com" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Your Name – Designer & Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Your Name, a designer and software engineer building thoughtful digital experiences."
+    />
+    <meta name="twitter:image" content="/preview.png" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS link -->
+    <link rel="stylesheet" href="./src/css/main.css" />
+  </head>
+
+  <body>
+    <main>
+      <section class="hero">
+        <div id="particles"></div>
+
+        <header class="hero-nav">
+          <div class="nav-inner">
+            <div class="nav-logo">CI</div>
+
+            <nav class="nav-links">
+              <a href="#about">About</a>
+              <a href="mailto:you@email.com">Email</a>
+            </nav>
+
+            <!-- Mobile hamburger -->
+            <button class="nav-toggle" aria-label="Open menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Overlay -->
+        <div class="nav-overlay"></div>
+
+        <!-- Mobile menu tray -->
+        <aside class="mobile-nav">
+          <button class="nav-close" aria-label="Close menu">✕</button>
+
+          <nav class="mobile-nav-links">
+            <a href="#about">About</a>
+            <a href="mailto:you@email.com">Email</a>
+          </nav>
+        </aside>
+
+        <div class="hero-content">
+          <h1 class="hero-name">Jerry C. Igbokwe</h1>
+
+          <p class="hero-role">
+            <span class="static-text">I am a&nbsp;</span>
+            <span class="typing"></span>
+          </p>
+
+          <div class="hero-subtext-container">
+            <p class="hero-subtext">
+              Passionate about crafting digital experiences through thoughtful
+              design, solid engineering, and real business impact.
+            </p>
+          </div>
+
+          <a href="#work" class="hero-cta"> View Selected Work </a>
+
+          <div class="hero-chevron">
+            <a href="#work" class="chevron" s>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="chevron"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="selected-work" id="work">
+        <div class="container">
+          <!-- Section header -->
+          <header class="section-header">
+            <h2>Selected Work</h2>
+            <p class="section-meta">2022 — Present</p>
+          </header>
+
+          <!-- Tabs -->
+          <div class="work-tabs">
+            <button class="tab active" data-filter="all">All</button>
+            <button class="tab" data-filter="design">Design</button>
+            <button class="tab" data-filter="dev">Development</button>
+          </div>
+
+          <section class="projects-section">
+            <!-- ADNEST SHOWROOM -->
+            <article class="project-row adnest-showroom" data-category="design">
+              <!-- LEFT : MEDIA -->
+              <div class="project-media">
+                <img
+                  src="src/assets/images/adnest.webp"
+                  alt="Project preview"
+                />
+              </div>
+
+              <!-- RIGHT : CONTENT -->
+              <div class="project-content">
+                <!-- ROW 1 -->
+                <div class="project-meta-row">
+                  <div class="meta-left">
+                    <span class="industry-tag">#01</span>
+                    <span class="meta-divider">|</span>
+                    <span class="project-category">Digital Advertising</span>
+                  </div>
+
+                  <div class="category-icons">
+                    <div class="category-icon" data-tooltip="Design">
+                      <img
+                        src="src/assets/icons/design.svg"
+                        alt="Design icon"
+                      />
+                    </div>
+
+                    <!-- <div class="category-icon" data-tooltip="Development">
+                      <img src="src/assets/icons/code.svg" alt="Code icon" />
+                    </div> -->
+                  </div>
+                </div>
+
+                <!-- ROW 2 -->
+                <h3 class="project-title">ADNEST</h3>
+
+                <!-- ROW 3 -->
+                <div class="desc-line-contianer">
+                  <div class="desc-line"></div>
+                  <div class="project-desc-container">
+                    <h4 class="project-desc-subheading">
+                      Interactive Showcase Platform
+                    </h4>
+                    <p class="project-desc">
+                      How Adnest’s Interactive Showroom Redefined Client
+                      Engagement and Drove a 25% Increase in Sales.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ROW 4 -->
+                <p class="project-team">
+                  <span class="team-label">Team:</span>
+                  Product Designer <span class="me">(Me)</span>
+                  <span class="dot">·</span>
+                  Engineering
+                  <span class="dot">·</span>
+                  Marketing
+                </p>
+
+                <!-- ROW 5 -->
+                <div class="project-cta">
+                  <a href="#" class="project-btn">View Case Study</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- COTRUST LOAN MGT. -->
+            <article
+              class="project-row cotrust-loan-mgt"
+              data-category="design"
+            >
+              <!-- LEFT : MEDIA -->
+              <div class="project-media">
+                <img
+                  src="src/assets/images/Cotrust-loan-desktop.png"
+                  alt="Project preview"
+                />
+              </div>
+
+              <!-- RIGHT : CONTENT -->
+              <div class="project-content">
+                <!-- ROW 1 -->
+                <div class="project-meta-row">
+                  <div class="meta-left">
+                    <span class="industry-tag">#02</span>
+                    <span class="meta-divider">|</span>
+                    <span class="project-category">Fintech</span>
+                  </div>
+
+                  <div class="category-icons">
+                    <div class="category-icon" data-tooltip="Design">
+                      <img
+                        src="src/assets/icons/design.svg"
+                        alt="Design icon"
+                      />
+                    </div>
+
+                    <!-- <div class="category-icon" data-tooltip="Development">
+                      <img src="src/assets/icons/code.svg" alt="Code icon" />
+                    </div> -->
+                  </div>
+                </div>
+
+                <!-- ROW 2 -->
+                <h3 class="project-title">COTRUST</h3>
+
+                <!-- ROW 3 -->
+                <div class="desc-line-contianer">
+                  <div class="desc-line"></div>
+                  <div class="project-desc-container">
+                    <h4 class="project-desc-subheading">
+                      Credit Mobility Engine
+                    </h4>
+                    <p class="project-desc">
+                      How Cotrust's AI-Driven Geo-Clustering Solution Unlocked
+                      Credit Mobility for Micro-Businesses.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ROW 4 -->
+                <p class="project-team">
+                  <span class="team-label">Team:</span>
+                  Product Designer <span class="me">(Me)</span>
+                  <span class="dot">·</span>
+                  Creative Director
+                  <span class="dot">·</span>
+                  Marketing
+                </p>
+
+                <!-- ROW 5 -->
+                <div class="project-cta">
+                  <a href="#" class="project-btn">View Case Study</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- SWINGSELL A/B TEST. -->
+            <article class="project-row ab-test" data-category="design">
+              <!-- LEFT : MEDIA -->
+              <div class="project-media">
+                <img src="src/assets/images/ab.png" alt="Project preview" />
+              </div>
+
+              <!-- RIGHT : CONTENT -->
+              <div class="project-content">
+                <!-- ROW 1 -->
+                <div class="project-meta-row">
+                  <div class="meta-left">
+                    <span class="industry-tag">#03</span>
+                    <span class="meta-divider">|</span>
+                    <span class="project-category">Digital Advertising</span>
+                  </div>
+
+                  <div class="category-icons">
+                    <div class="category-icon" data-tooltip="Design">
+                      <img
+                        src="src/assets/icons/design.svg"
+                        alt="Design icon"
+                      />
+                    </div>
+
+                    <!-- <div class="category-icon" data-tooltip="Development">
+                      <img src="src/assets/icons/code.svg" alt="Code icon" />
+                    </div> -->
+                  </div>
+                </div>
+
+                <!-- ROW 2 -->
+                <h3 class="project-title">SWINGSELL</h3>
+
+                <!-- ROW 3 -->
+                <div class="desc-line-contianer">
+                  <div class="desc-line"></div>
+                  <div class="project-desc-container">
+                    <h4 class="project-desc-subheading">
+                      Real-Time Creative Performance Platform
+                    </h4>
+                    <p class="project-desc">
+                      How Real-Time A/B Testing Transformed Ad Campaigns into
+                      Predictable Growth.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ROW 4 -->
+                <p class="project-team">
+                  <span class="team-label">Team:</span>
+                  Product Designer <span class="me">(Me)</span>
+                  <span class="dot">·</span>
+                  Creative Director
+                  <span class="dot">·</span>
+                  Product Manager
+                </p>
+
+                <!-- ROW 5 -->
+                <div class="project-cta">
+                  <a href="#" class="project-btn">View Case Study</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- COTRUST WEB & MOBILE APP -->
+            <article
+              class="project-row cotrust-web-mobile"
+              data-category="design"
+            >
+              <!-- LEFT : MEDIA -->
+              <div class="project-media">
+                <img
+                  src="src/assets/images/cotrust-web.png"
+                  alt="Project preview"
+                />
+              </div>
+
+              <!-- RIGHT : CONTENT -->
+              <div class="project-content">
+                <!-- ROW 1 -->
+                <div class="project-meta-row">
+                  <div class="meta-left">
+                    <span class="industry-tag">#04</span>
+                    <span class="meta-divider">|</span>
+                    <span class="project-category">Fintech</span>
+                  </div>
+
+                  <div class="category-icons">
+                    <div class="category-icon" data-tooltip="Design">
+                      <img
+                        src="src/assets/icons/design.svg"
+                        alt="Design icon"
+                      />
+                    </div>
+
+                    <!-- <div class="category-icon" data-tooltip="Development">
+                      <img src="src/assets/icons/code.svg" alt="Code icon" />
+                    </div> -->
+                  </div>
+                </div>
+
+                <!-- ROW 2 -->
+                <h3 class="project-title">COTRUST</h3>
+
+                <!-- ROW 3 -->
+                <div class="desc-line-contianer">
+                  <div class="desc-line"></div>
+                  <div class="project-desc-container">
+                    <h4 class="project-desc-subheading">
+                      A Unified Web and Mobile Experience
+                    </h4>
+                    <p class="project-desc">
+                      How a User-Focused Website and a Mobile App Expanded
+                      Access to Finance Across Africa.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ROW 4 -->
+                <p class="project-team">
+                  <span class="team-label">Team:</span>
+                  Product Designer <span class="me">(Me)</span>
+                  <span class="dot">·</span>
+                  Engineering
+                  <span class="dot">·</span>
+                  Marketing
+                </p>
+
+                <!-- ROW 5 -->
+                <div class="project-cta">
+                  <a href="#" class="project-btn">View Case Study</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- HEDY AGENCY -->
+            <article class="project-row hedy-agency" data-category="dev">
+              <!-- LEFT : MEDIA -->
+              <div class="project-media">
+                <img src="src/assets/images/hedy.png" alt="Project preview" />
+              </div>
+
+              <!-- RIGHT : CONTENT -->
+              <div class="project-content">
+                <!-- ROW 1 -->
+                <div class="project-meta-row">
+                  <div class="meta-left">
+                    <span class="industry-tag">#05</span>
+                    <span class="meta-divider">|</span>
+                    <span class="project-category">Creative Agency</span>
+                  </div>
+
+                  <div class="category-icons">
+                    <!-- <div class="category-icon" data-tooltip="Design">
+                      <img
+                        src="src/assets/icons/design.svg"
+                        alt="Design icon"
+                      />
+                    </div> -->
+
+                    <div class="category-icon" data-tooltip="Development">
+                      <img src="src/assets/icons/code.svg" alt="Code icon" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ROW 2 -->
+                <h3 class="project-title">HEDY</h3>
+
+                <!-- ROW 3 -->
+                <div class="desc-line-contianer">
+                  <div class="desc-line"></div>
+                  <div class="project-desc-container">
+                    <h4 class="project-desc-subheading">
+                      Immersive Digital Experience
+                    </h4>
+                    <p class="project-desc">
+                      Translating pixel-perfect designs into responsive,
+                      structured, and immersive web experiences that reflect
+                      Hedy’s creative vision.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ROW 4 -->
+                <p class="project-team">
+                  <span class="team-label">Team:</span>
+                  Frontend Engineer <span class="me">(Me)</span>
+                  <span class="dot">·</span>
+                  Marketing
+                  <span class="dot">·</span>
+                  Product Owner
+                </p>
+
+                <!-- ROW 5 -->
+                <div class="project-cta">
+                  <a href="#" class="project-btn">View Case Study</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- MY PORTFOLIO -->
+            <article class="project-row Portfolio" data-category=" design dev">
+              <!-- LEFT : MEDIA -->
+              <div class="project-media">
+                <img
+                  src="src/assets/images/portfolio.png"
+                  alt="Project preview"
+                />
+              </div>
+
+              <!-- RIGHT : CONTENT -->
+              <div class="project-content">
+                <!-- ROW 1 -->
+                <div class="project-meta-row">
+                  <div class="meta-left">
+                    <span class="industry-tag">#06</span>
+                    <span class="meta-divider">|</span>
+                    <span class="project-category">Personal</span>
+                  </div>
+
+                  <div class="category-icons">
+                    <div class="category-icon" data-tooltip="Design">
+                      <img
+                        src="src/assets/icons/design.svg"
+                        alt="Design icon"
+                      />
+                    </div>
+
+                    <div class="category-icon" data-tooltip="Development">
+                      <img src="src/assets/icons/code.svg" alt="Code icon" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ROW 2 -->
+                <h3 class="project-title">My Portfolio</h3>
+
+                <!-- ROW 3 -->
+                <div class="desc-line-contianer">
+                  <div class="desc-line"></div>
+                  <div class="project-desc-container">
+                    <h4 class="project-desc-subheading">
+                      Immersive Digital Experience
+                    </h4>
+                    <p class="project-desc">
+                      Translating pixel-perfect designs into responsive,
+                      structured, and immersive web experiences that reflect
+                      Hedy’s creative vision.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ROW 4 -->
+                <p class="project-team">
+                  <span class="team-label">Team:</span>
+                  Frontend Engineer <span class="me">(Me)</span>
+                  <span class="dot">·</span>
+                  Marketing
+                  <span class="dot">·</span>
+                  Product Owner
+                </p>
+
+                <!-- ROW 5 -->
+                <div class="project-cta">
+                  <a href="#" class="project-btn">View Case Study</a>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </section>
+    </main>
+    <div class="cursor-ring"></div>
+
+    <script src="./src/js/particles.min.js"></script>
+    <script src="./src/js/particlesConfig.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./src/js/typing.js"></script>
+    <script src="./src/js/cursor-ring.js"></script>
+    <script src="./src/js/menu-toggle.js"></script>
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
