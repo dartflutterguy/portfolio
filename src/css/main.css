@@ -1,0 +1,94 @@
+@import url(./hero.css);
+@import url(./projects.css);
+
+/* =====================================================
+   MAIN BASE STYLES
+   Purpose:
+   - Establish rem scaling (1rem = 10px)
+   - Define typography system
+   - Set global defaults without layout assumptions
+   ===================================================== */
+
+/* Root font-size: 62.5% of 16px = 10px */
+html {
+  font-size: 62.5%;
+}
+
+/* Global body styles */
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 1.6rem; /* 16px base reading size */
+  line-height: 1.6;
+  font-weight: 400;
+
+  color: #eaeaea;
+  background-color: #050505;
+  /* background-color: #000000; */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =====================================================
+   Typography defaults
+   ===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
+
+/* =====================================================
+   Media & interactive elements
+   ===================================================== */
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Cursor ring */
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #a9bdcf;
+  opacity: 1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.15s ease-out,
+    width 0.15s ease-out,
+    height 0.15s ease-out,
+    opacity 0.15s ease-out;
+  z-index: 9999;
+}
+
+/* Hover state (.is-hovering Class is added dynamically in js file) */
+.cursor-ring.is-hovering {
+  width: 48px;
+  height: 48px;
+  opacity: 0.2;
+}
