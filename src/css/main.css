@@ -24,7 +24,7 @@ body {
 
   color: #eaeaea;
   /* background-color: #050505; */
-  background-color: red;
+  background-color: rgb(95, 6, 6);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -99,7 +99,7 @@ button {
 
 /* =====================================================
    Footer
-   ===================================================== */
+   ==================================================== */
 
 .site-footer {
   display: flex;
