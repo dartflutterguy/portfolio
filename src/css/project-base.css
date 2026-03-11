@@ -1,0 +1,526 @@
+/* project-base.css */
+
+:root {
+  --max-width: 1100px;
+  /* Dark theme palette */
+  --bg: #0c0d0d; /* page background */
+  --card-bg: #0c0d0d; /* card / surface background */
+  --text-color: #cfd9e4; /* primary text (light) */
+  --muted-color: #b1b1b1; /* secondary / muted text */
+  --border-color: rgba(255, 255, 255, 0.06);
+  --accent: #a9bdcf; /* subtle light-blue accent */
+  --teal: #20b2aa; /* teal accent for markers and highlights */
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.project-wrapper {
+  /* max-width: var(--max-width); */
+  padding: 2.5rem 4rem;
+}
+
+/* HERO */
+
+.project-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 2.4rem;
+}
+
+.project-hero h1 {
+  font-size: 48px;
+  line-height: 60px;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  color: var(--teal);
+  text-transform: uppercase;
+}
+
+.project-hero .project-company {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 10px;
+  margin-bottom: 18px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  position: relative;
+  padding-left: 22px; /* space for the marker */
+}
+
+.project-hero .project-company::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(32, 178, 170, 0.5); /* teal @50% */
+}
+
+.project-hero p {
+  font-size: 18px;
+  color: var(--muted-color);
+  margin: 0;
+}
+
+.project-hero img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 16px;
+}
+
+/* META INFO BLOCK — full-width; desktop: horizontal meta items */
+.project-meta-block {
+  margin-bottom: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.059);
+  padding-top: 28px;
+}
+
+.project-meta-block .meta-left {
+  display: flex;
+  gap: 32px;
+  align-items: stretch; /* ensure children stretch to match the tallest card */
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.project-meta-block .meta-left > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 220px;
+  min-width: 180px;
+  max-width: 320px;
+  box-sizing: border-box;
+  /* padding: 12px 16px 12px 24px; */
+  padding: 10px 14px 10px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.004);
+}
+
+.project-meta-block .meta-left h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  /* color: #cfd9e4; */
+  color: rgba(255, 255, 255, 0.75);
+  position: relative;
+  padding-left: 18px; /* space for the title marker */
+}
+
+.project-meta-block .meta-left h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(from var(--teal) r g b / 50%);
+}
+
+/* back link above hero */
+.project-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted-color);
+  text-decoration: none;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.project-back .back-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgb(from var(--muted-color) r g b / 50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.project-back .back-icon img {
+  width: 14px;
+  height: 14px;
+  display: block;
+  object-fit: contain;
+
+  filter: invert(95%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(105%)
+    contrast(100%);
+
+  transition: color 0.2s ease;
+}
+
+.project-back:hover .back-icon {
+  border-color: rgb(from var(--teal) r g b / 50%);
+}
+
+.project-back:hover .back-icon img {
+  filter: invert(33%) sepia(87%) saturate(541%) hue-rotate(135deg)
+    brightness(94%) contrast(101%);
+}
+
+.project-meta-block .meta-left ul li {
+  margin-bottom: 8px;
+}
+
+.project-meta-block .meta-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #b1b1b1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.project-main {
+  margin-top: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.project-main section {
+  margin-bottom: 80px;
+}
+
+.project-main h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.project-main p {
+  font-size: 1rem;
+  color: var(--muted-color);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  width: 60%;
+}
+
+.project-main p:last-child {
+  margin-bottom: 0;
+}
+
+.case-image {
+  display: flex;
+  gap: 1rem;
+  max-width: 100%;
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+
+/* Mobile screens grid used in CoTrust project: 2x2 grid on desktop, stacks on narrow viewports */
+.mobile-screens-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.mobile-screens-grid .mobile-screen {
+  box-sizing: border-box;
+  padding: 12px 8px; /* 12px top/bottom, 8px left/right as requested */
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.004);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-screens-grid .mobile-screen img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.marketplace {
+  width: 75%;
+  height: auto;
+}
+
+.case-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+.case-image video {
+  width: 100%;
+  border-radius: 13.5px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+.case-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 32px 0;
+}
+
+.case-list li {
+  color: var(--muted-color);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 24px;
+}
+
+.case-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-weight: bold;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+
+/* =====================================================
+   Footer
+   ===================================================== */
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 20px;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+.site-footer p {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #eaeaea;
+  opacity: 0.7;
+}
+
+/* MOBILE: stack meta items vertically */
+@media (max-width: 900px) {
+  .project-meta-block .meta-left {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .project-meta-block .meta-left > div + div {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+.project-main h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.project-main p {
+  margin-bottom: 16px;
+  color: var(--muted-color);
+}
+
+.project-main img {
+  width: 100%;
+  margin-top: 24px;
+  border-radius: 12px;
+}
+
+/* RIGHT SIDEBAR */
+
+.project-meta {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+  font-size: 14px;
+}
+
+.project-meta h4 {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.project-meta ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.project-meta li {
+  margin-bottom: 8px;
+  color: var(--muted-color);
+}
+
+.design-thinking {
+  display: block;
+  max-width: 512px;
+  height: auto;
+}
+
+/* Cotrust Web & Movibile */
+.media-subsection {
+  margin-top: 60px;
+}
+
+/* Cursor ring */
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #a9bdcf;
+  opacity: 1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.15s ease-out,
+    width 0.15s ease-out,
+    height 0.15s ease-out,
+    opacity 0.15s ease-out;
+  z-index: 9999;
+}
+
+/* Hover state (.is-hovering Class is added dynamically in js file) */
+.cursor-ring.is-hovering {
+  width: 48px;
+  height: 48px;
+  opacity: 0.2;
+}
+
+/* back-to-top (bottom-right) */
+.back-top {
+  position: fixed;
+  right: 24px;
+  bottom: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 9999;
+  text-decoration: none;
+  background: transparent;
+}
+.back-top {
+  /* start hidden; will be revealed after scrolling past hero */
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+.back-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-top .back-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.012);
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    transform 0.12s ease;
+}
+.back-top .back-icon img {
+  width: 16px;
+  height: 16px;
+  display: block;
+  object-fit: contain;
+  filter: invert(95%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(105%)
+    contrast(100%);
+  transform: rotate(90deg);
+  transition:
+    filter 0.2s ease,
+    transform 0.12s ease;
+}
+.back-top:hover .back-icon {
+  border-color: rgb(from var(--teal) r g b / 50%);
+  transform: translateY(-3px);
+}
+.back-top:hover .back-icon img {
+  filter: invert(33%) sepia(87%) saturate(541%) hue-rotate(135deg)
+    brightness(94%) contrast(101%);
+}
+
+@media (max-width: 700px) {
+  .back-top {
+    right: 16px;
+    bottom: 20px;
+  }
+  .back-top .back-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .back-top .back-icon img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .project-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .project-meta-block {
+    grid-template-columns: 1fr;
+  }
+
+  .project-meta {
+    position: static;
+    margin-top: 40px;
+  }
+}
+
+/* Stack mobile screens vertically on narrow viewports */
+@media (max-width: 700px) {
+  .mobile-screens-grid {
+    grid-template-columns: 1fr;
+  }
+}
